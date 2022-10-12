@@ -10,6 +10,8 @@ public class PremiumTopic {
 
     @Bean
     public NewTopic newTopic(){
-        return TopicBuilder.name("PremiumUsers").partitions(10).replicas(1).build();
+        return TopicBuilder.
+                name("PremiumUsers")
+                .build();
     }
 }
