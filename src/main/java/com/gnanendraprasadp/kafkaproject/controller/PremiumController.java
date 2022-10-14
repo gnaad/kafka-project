@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1")
 public class PremiumController {
-    private PremiumProducer producers;
+    private PremiumProducer premiumProducer;
 
-    public PremiumController(PremiumProducer producers) {
-        this.producers = producers;
+    public PremiumController(PremiumProducer premiumProducer) {
+        this.premiumProducer = premiumProducer;
     }
 
     @GetMapping("/send")
-    private ResponseEntity<String> sendMessage(@RequestParam("message") String message){
-        producers.sendMessage(message);
+    public ResponseEntity<String> sendMessage(@RequestParam("message") String message){
+        premiumProducer.sendMessage(message);
         return ResponseEntity.ok("Message sent successfully");
     }
 }

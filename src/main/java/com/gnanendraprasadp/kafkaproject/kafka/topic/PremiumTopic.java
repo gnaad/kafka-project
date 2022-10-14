@@ -11,7 +11,7 @@ public class PremiumTopic {
     @Bean
     public NewTopic newTopic(){
         return TopicBuilder.
-                name("PremiumUsers")
+                name("PremiumTopic")
                 .build();
     }
 }

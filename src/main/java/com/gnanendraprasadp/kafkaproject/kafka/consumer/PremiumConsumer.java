@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 public class PremiumConsumer {
     private static final Logger LOGGER = LoggerFactory.getLogger(PremiumConsumer.class);
 
-    @KafkaListener(topics = "PremiumUsers", groupId = "premiumUsers")
-    public void consumePremium(String message) {
+    @KafkaListener(topics = "PremiumTopic", groupId = "premiumGroup")
+    public void consumeData(String message) {
         LOGGER.info(String.format("Message received -> %s",message));
     }
 }

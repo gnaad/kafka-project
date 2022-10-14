@@ -17,6 +17,6 @@ public class PremiumProducer {
 
     public void sendMessage(String message) {
         LOGGER.info(String.format("Message sent %s",message));
-        kafkaTemplate.send("PremiumUsers", message);
+        kafkaTemplate.send("PremiumTopic", message);
     }
 }
