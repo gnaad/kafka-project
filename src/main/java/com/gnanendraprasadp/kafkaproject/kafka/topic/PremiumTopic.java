@@ -14,4 +14,11 @@ public class PremiumTopic {
                 name("PremiumTopic")
                 .build();
     }
+
+    @Bean
+    public NewTopic jsonTopic(){
+        return TopicBuilder.
+                name("JsonTopic")
+                .build();
+    }
 }
